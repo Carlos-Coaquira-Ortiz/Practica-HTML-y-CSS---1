@@ -1,0 +1,110 @@
+/*
+Colores
+  dark-purple: hsl(300, 43%, 22%)
+  pink:hsl(333, 80%, 67%)
+  purple: hsl(303, 10%, 53%)
+  soft-white: hsl(300, 24%, 96%)
+  background-color: hsl(0, 0%, 90%);
+
+Fuente de la página
+  https://fonts.google.com/specimen/Karla
+  Estilos 200 y 400
+*/
+*{
+  box-sizing: border-box;
+}
+body{
+  width: 1400px;
+  margin: 10em auto;
+  font-family: 'Karla', sans-serif;
+  background-color: hsl(0, 0%, 90%);
+}
+
+.bg-img{
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-img--top{
+  top: 0;
+  left: 0;
+}
+
+.bg-img--bottom{
+  bottom: 0;
+  right: 0;
+}
+
+.site-header, .site-aside{
+  display: inline-block;
+  width: 450px;
+}
+
+.site-header{
+  margin-right: 400px;
+  margin-bottom: 5em;
+}
+
+.header-title{
+  font-size: 3rem;
+  color: hsl(300, 43%, 22%);
+}
+
+.header-text, .rate__text{
+  color: hsl(303, 10%, 53%);
+}
+
+.rate{
+  position: relative;
+  margin-bottom: 1em;
+  padding: 0 2em;
+  border-radius: 10px;
+  line-height: 5;
+  background-color: hsl(300, 24%, 96%);
+}
+.rate__text{
+  margin-left: 1em;
+}
+.rate__stars{
+  vertical-align: middle;
+  margin-right: .5em;
+}
+.rate--first{
+  left: -75px;
+}
+.rate--second{
+  left: -50px;
+}
+.profile{
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  margin-right: 50px;
+  padding: 2em 2.5em;
+  border-radius: 10px;
+  color: hsl(300, 24%, 96%);
+  background-color: hsl(300, 43%, 22%);
+}
+.profile--second{
+  top: 50px;
+}
+.profile--third{
+  top: 75px;
+}
+.user{
+  width: 250px;
+}
+.user__img{
+  border-radius: 50%;
+  max-width: 25%;
+}
+.user__img, .user__info{
+  display: inline-block;
+  vertical-align: middle;
+}
+.user__name, .user__category{
+  margin: .5em 1em;
+}
+.user__category{
+  color: hsl(333, 80%, 67%);
+}
