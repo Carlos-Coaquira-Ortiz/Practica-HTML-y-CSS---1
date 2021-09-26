@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: #333;
+    font-weight: 500;
+}
+.grid-container{
+  width: 1250px;
+  margin: 3em auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  grid-template-areas: 
+  "first first second third"
+  "fourth fifth fifth third";
+}
+@media screen and (max-width:770px) {
+  .grid-container{
+    grid-template-areas: 
+    "first first third"
+    "fourth second third"
+    "fifth fifth responsive";
+  }
+}
+@media screen and (max-width:440px) {
+  .grid-container{
+    grid-template-areas: 
+    "first first"
+    "second third"
+    "fourth third"
+    "fifth fifth";
+  }
+}
+.card{
+  position: relative;
+  height: 400px;
+  vertical-align: top;
+  padding: 2em;
+  line-height: 1.5;
+  border-radius: 1em;
+}
+.card__quotes{
+  position: absolute;
+  top: 4em;
+  right: 10em;
+}
+.card__title{
+  position: relative;
+}
+.card__text{
+  opacity: 0.7;
+}
+.card--first, .card--second, .card--fifth{
+  color: #fff;
+}
+.card--first{
+  background-color: hsl(263, 55%, 52%);
+  width: 625px;
+  grid-area: first;
+}
+.card--second{
+  background-color: hsl(217, 19%, 35%);
+  width: 300px;
+  grid-area: second;
+}
+.card--third{
+  background-color: #fff;
+  color: #000;
+  width: 300px;
+  height: 825px;
+  grid-area: third;
+}
+.card--fourth{
+  background-color: #fff;
+  color: #000;
+  width: 300px;
+  grid-area: fourth;
+}
+.card--fifth{
+  background-color: hsl(219, 29%, 14%);
+  width: 625px;
+  grid-area: fifth;
+}
+.user{
+  width: 250px;
+}
+.user__img{
+  border-radius: 50%;
+  max-width: 25%;
+}
+.user__img, .user__info{
+  display: inline-block;
+  vertical-align: middle;
+}
+.user__name, .user__category{
+  margin: 0.5em 1em;
+  opacity: 0.5;
+}
